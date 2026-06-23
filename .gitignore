@@ -32,16 +32,16 @@
 *.app
 
 # project results
-projects/*/results
+projects/first_test/results/*
 projects/test_single_artery/*
 projects/archive
 
 projects/cerebral/3D_model_resutls/*
-projects/*/plots
+projects/*/plots/*
 projects/simple_run/literature_results/*
 
 # models
-models/archieve/*
+models/archive
 
 # pilot code
 pilot_matlab/*

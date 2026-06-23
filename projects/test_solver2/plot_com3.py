@@ -1,0 +1,58 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import os
+import numpy as np
+
+# Halasz_P045_resistance
+# Reymond_103
+# Reymond_103_Q
+
+cases = ['Abel_ref3_myogenic_NoMy','Abel_ref3_myogenic']
+models = 'p33'
+elements = ['Q1','Q1']
+
+#models = 'heart_kim'
+#elements = ['aorta','left-ventricular']
+
+mmHg_to_Pa = 133.3616
+
+start = 1
+
+plt.figure()
+data = pd.read_csv(os.path.join("results",  cases[0], models, elements[0] + ".txt"),header=None)
+t = data[0]
+p = (data[2-start]-1e5)/mmHg_to_Pa;
+#q = data[6-start]*1e6*60;
+#v = data[4-start];
+#a = data[16-start];
+#p = (data[1]-1e5)/mmHg_to_Pa;
+plt.plot(t,p)
+
+start = 1
+
+data = pd.read_csv(os.path.join("results",  cases[1], models, elements[1] + ".txt"),header=None)
+t = data[0]
+p = (data[2-start]-1e5)/mmHg_to_Pa;
+#q = data[6-start]*1e6*60;
+#v = data[4-start];
+#a = data[16-start];
+#p = (data[1]-1e5)/mmHg_to_Pa;
+#q = data[2]*1e6
+
+ref=[]
+
+for i in range(len(t)):
+	ref.append(23.88)
+plt.plot(t,p)
+plt.plot(t,ref)
+
+
+
+plt.xlabel('time [s]')
+#plt.ylabel('volume flow rate [ml/s]')
+plt.ylabel('pressure [mmHg]')
+leg = ["Base_NoMy." , "mod_My"]
+plt.legend(leg)
+plt.grid()
+plt.savefig('Q33' + models + '.png')
+
