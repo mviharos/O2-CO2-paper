@@ -1,6 +1,6 @@
 RBC,PO2,HBsat
 O2transport_init, 4.9e15, 2.9545e-3, 0.97
-co2transport_init, 0.02665714, 0.03082293, 0.73392893, 0.08805559, 0.04712094
+co2transport_init, 0.02496, 0.0254968, 0.7048, 0.083527, 0.042741
 
 
 type,ID,name,start_node,end_node,start_diameter[SI],end_diameter[SI],start_thickness[SI],end_thickness[SI],length[SI],division_points,elastance_1[SI],res_start[SI],res_end[SI],visc_fact[1],k1[SI],k2[SI],k3[SI]

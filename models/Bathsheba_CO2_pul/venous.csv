@@ -1,6 +1,6 @@
 RBC,PO2,HBsat
 O2transport_init, 4.9e15, 1.1467116e-03, 7.6364383e-01
-co2transport_init, 0.05004034, 0.02960993, 0.78838485, 0.09752594, 0.04786631
+co2transport_init, 0.04127, 0.02411, 0.74671, 0.0935, 0.04609
 
 type,ID,name,start_node,end_node,start_diameter[SI],end_diameter[SI],start_thickness[SI],end_thickness[SI],length[SI],division_points,elastance_1[SI],res_start[SI],res_end[SI],visc_fact[1],k1[SI],k2[SI],k3[SI]
 vis_f,84,Sup.venacava,n1,H,0.016,0.016,0.0016,0.0016,0.015,5,1.e4,0,0,2.75,2.e5,-2253.,8.65e3
